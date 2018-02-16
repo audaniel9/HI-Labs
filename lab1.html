@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="1">
+	<title>Lab 1</title>
+	<link rel="stylesheet" href="lab1style.css">
+</head>
+<body>
+	<h1>TECH SUPPORT</h1>
+		<div class="formArea">
+			<h2>Personal Information</h2>
+			<form>
+				<section>
+				<label>First Name:</label> <input type="text" name="fname"> &nbsp;&nbsp;
+				<label>Last Name:</label> <input type="text" name="lname"> <br>
+			</section>
+				<label>Email:</label> <input type="text" name="email"> &nbsp;&nbsp;
+				<label>Phone Number:</label> <input type="text" name="phone"> <br>
+				<label>State:</label> <input type="text" name="state"> &nbsp;&nbsp;
+				<label>City:</label> <input type="text" name="city">
+			</form>
+		</div>
+		<br>
+		<div class="formArea">
+			<h2>Device Information</h2>
+			<label>Device Type:</label>
+			<select name="type" style="width:164px; height:25px;">
+				<option value="Desktop">Desktop</option>
+				<option value="Laptop">Laptop</option>
+				<option value="Smartphone">Smartphone</option>
+				<option value="Other">Other</option>
+			</select> &nbsp;&nbsp;
+			<label>Computer Brand:</label> <input type="text" name="brand"> <br><br>
+			<label>Operating System:</label> <br> <input type="text" name="os"> <br><br>
+			<label>Describe issue:</label> <br> <textarea name="message" style="width:50%; height:70px"></textarea> <br><br>
+		</div>
+			<input class="button" type="submit" name="submit" style="width:100px;height:30px;" >
+</body>
+</html>
