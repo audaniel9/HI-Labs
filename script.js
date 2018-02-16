@@ -1,5 +1,6 @@
 <script>
-function myFunction() {
-    document.getElementById("form").submit();
+function submitForms() {
+    document.getElementById("personalForm").submit();
+    document.getElementById("deviceForm").submit();
 }
 </script>

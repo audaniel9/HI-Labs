@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="1">
+	<!-- <meta http-equiv="refresh" content="1"> -->
 	<title>Lab 1</title>
 	<link rel="stylesheet" href="lab1style.css">
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<h1>TECH SUPPORT</h1>
-		<div class="formArea">
+	<form>
+		<div id="personalForm" class="formArea">
 			<h2>Personal Information</h2>
-			<form>
-				<section>
-				<label>First Name:</label> <input type="text" name="fname"> &nbsp;&nbsp;
-				<label>Last Name:</label> <input type="text" name="lname"> <br>
+				<section class="left">
+				<label>First Name:</label> <input type="text" name="fname"> <br>
+				<label>Email:</label> <input type="email" name="email"> <br>
+				<label>City:</label> <input type="text" name="city"> <br>
+				<label>Gender:</label>
+				<select>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Other">Other</option>
+				</select> <br>
 			</section>
-				<label>Email:</label> <input type="text" name="email"> &nbsp;&nbsp;
-				<label>Phone Number:</label> <input type="text" name="phone"> <br>
-				<label>State:</label> <input type="text" name="state"> &nbsp;&nbsp;
-				<label>City:</label> <input type="text" name="city">
-			</form>
+			<section class="right">
+				<label>Last Name:</label> <input type="text" name="lname"> <br>
+				<label>Phone Number:</label> <input type="tel" name="phone"> <br>
+				<label>State:</label> <input type="text" name="state"> <br>
+				<label>Personal/Business?</label>
+					<input class="radioButton" type="radio" value="Personal">Personal
+					<input class="radioButton" type="radio" value="Personal">Business <br>
+			</section>
 		</div>
 		<br>
-		<div class="formArea">
+		<div id="deviceForm" class="formArea">
 			<h2>Device Information</h2>
-			<label>Device Type:</label>
-			<select name="type" style="width:164px; height:25px;">
-				<option value="Desktop">Desktop</option>
-				<option value="Laptop">Laptop</option>
-				<option value="Smartphone">Smartphone</option>
-				<option value="Other">Other</option>
-			</select> &nbsp;&nbsp;
-			<label>Computer Brand:</label> <input type="text" name="brand"> <br><br>
-			<label>Operating System:</label> <br> <input type="text" name="os"> <br><br>
-			<label>Describe issue:</label> <br> <textarea name="message" style="width:50%; height:70px"></textarea> <br><br>
+				<section class="left">
+					<label>Device Type:</label>
+					<select>
+						<option value="Desktop">Desktop</option>
+						<option value="Laptop">Laptop</option>
+						<option value="Smartphone">Smartphone</option>
+						<option value="Other">Other</option>
+					</select> <br>
+					<label>Device Model:</label> <input type="input" name="model"> <br>
+				</section>
+				<section class="right">
+					<label>Device Brand:</label> <input type="text" name="brand"> <br>
+					<label>Operating System:</label> <input type="text" name="os"> <br>
+				</section>
+				<section class="center">
+					<label>Describe issue:</label> <textarea rows="2" cols="70"></textarea>
+				</section>
 		</div>
-			<input class="button" type="submit" name="submit" style="width:100px;height:30px;" >
+	</form>
+			<br>
+			<input type="submit" value="Submit" style="width:100px;height:30px;" >
 </body>
 </html>

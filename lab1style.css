@@ -14,22 +14,43 @@ h1 {
 
 h2 {
 	line-height: 10px;
+	grid-column: 1/span 4;
 }
 
-form {
-	display: grid;
-	grid-template-columns: 500px 500px;
-	grid-gap: 16px;
+input, select {
+	box-sizing: border-box;
+	width:173px;
+	height:23px;
 }
 
-section {
+.left {
 	grid-column: 1/2;
+	text-align: right;
+}
+
+.right {
+	grid-column: 2/3;
+	text-align: right;
+}
+
+.center {
+	grid-column: 1/span 2;
+	text-align: center;
 }
 
 .formArea {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	grid-gap: 25px;
 	background-color: white;
 	margin: 0px 400px;
 	padding: 20px 0px;
 	line-height: 50px;
 	box-shadow: 0px 1px 3px rgba(0,0,0,.1);
+}
+
+.radioButton {
+	width: auto;
+	height: auto;
 }
