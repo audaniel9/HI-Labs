@@ -63,6 +63,7 @@ input, select {
 	border: 0px;
 	box-shadow: 0px 1px 3px rgba(0,0,0,.1)
 }
+
 .theme:hover {
 	opacity: 1;
 	transition: 0.3s;
@@ -73,7 +74,7 @@ input, select {
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: center;
-	grid-gap: 25px;
+	grid-column-gap: 25px;
 	background-color: white;
 	margin: 0px 23%;
 	padding: 20px 0px;
@@ -81,22 +82,21 @@ input, select {
 	box-shadow: 0px 1px 3px rgba(0,0,0,.1);
 }
 
-.account {
+.accountArea {
 	display: grid;
 	grid-template-columns: auto auto;
-	grid-gap: 0px;
+	grid-auto-flow: column;
 	background-color: white;
+	margin: 0px 0px;
 	padding: 20px 0px;
 	line-height: 50px;
-	width: 50%;
 }
 
 .accountWrapper {
-	display: flex;
+	display: grid;
+	grid-template-columns: 49.1% auto;
+	grid-column-gap: 25px;
 	margin: 0px 23%;
-	padding: 20px 0px;
-	line-height: 50px;
-	border: solid;
 }
 
 .radioButton {
@@ -109,6 +109,10 @@ input, select {
 	height:30px;
 	opacity: 0.8;
 	cursor:pointer;
+}
+
+.accountSubmit {
+	width: 150px;
 }
 
 .submit:hover {

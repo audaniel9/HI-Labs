@@ -12,25 +12,28 @@
 	</div>
 		<button class="theme" type="button"><strong style="font-size: 14px;">Background</strong></button>
 	<h2>TECH SUPPORT</h2>
-	<form>
+	<form id="form">
 		<div class="accountWrapper">
-			<div class="account">
-				<h3>Create an Account</h3> <br>
-				<section class="center">
+			<div class="accountArea">
+				<h3>Create an Account</h3>
+				<section class="left">
 					<label>Enter a Username:</label> <input type="text" name="usernameReg"> <br>
 					<label>Enter a Password:</label> <input type="password" name="passwordReg"> <br>
 					<label>Re-enter Password:</label> <input type="password" name="passwordRegReenter"> <br>
+					<input class="submit accountSubmit" type="submit" value="Create Account"> <br>
 				</section>
 			</div>
-			<div class="account">
-				<h3>Sign in</h3> <br>
-				<section class="right">
+			<div class="accountArea">
+				<h3>Sign in</h3>
+				<section class="left">
 					<label>Username:</label> <input type="text" name="username"> <br>
 					<label>Password:</label> <input type="password" name="password"> <br>
+					<input type="checkbox" name="remember" style="width:auto;height:auto;"> <label>Remember me on this computer</label><br>
+					<input class="submit accountSubmit" type="submit" value="Sign in"> <br>
 				</section>
 			</div>
-			<br>
 		</div>
+		<br>
 		<div id="personalForm" class="formArea">
 			<h3>Personal Information</h3>
 				<section class="left">
