@@ -53,7 +53,7 @@ input, select {
 	box-shadow: 0px 1px 3px rgba(0,0,0,.3);
 }
 
-.theme {
+.themeButton {
 	position: fixed;
 	left: 0;
 	width: 140px;
@@ -64,10 +64,34 @@ input, select {
 	box-shadow: 0px 1px 3px rgba(0,0,0,.1)
 }
 
-.theme:hover {
+.themeButton:hover {
 	opacity: 1;
 	transition: 0.3s;
 	cursor: pointer;
+}
+
+.themeStyleAccount {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-auto-flow: column;
+	background-color: #212121;
+	color: #eeeeee;
+	margin: 0px 0px;
+	padding: 20px 0px;
+	line-height: 50px;
+}
+
+.themeStyleInfo {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	grid-column-gap: 25px;
+	background-color: #212121;
+	color: #eeeeee;
+	margin: 0px 23%;
+	padding: 20px 0px;
+	line-height: 50px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.1);
 }
 
 .formArea {
@@ -75,7 +99,7 @@ input, select {
 	grid-template-columns: auto auto;
 	justify-content: center;
 	grid-column-gap: 25px;
-	background-color: white;
+	background-color: #ffffff;
 	margin: 0px 23%;
 	padding: 20px 0px;
 	line-height: 50px;
@@ -86,7 +110,7 @@ input, select {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-auto-flow: column;
-	background-color: white;
+	background-color: #ffffff;
 	margin: 0px 0px;
 	padding: 20px 0px;
 	line-height: 50px;

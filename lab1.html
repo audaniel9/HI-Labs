@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="refresh" content="1">
+	<!-- <meta http-equiv="refresh" content="1"> -->
 	<title>Lab 1</title>
 	<link rel="stylesheet" href="lab1style.css">
 	<script type="text/javascript" src="script.js"></script>
@@ -10,11 +10,11 @@
 	<div class="header">
 		<h1>Human Interaction Lab</h1>
 	</div>
-		<button class="theme" type="button"><strong style="font-size: 14px;">Background</strong></button>
+		<button class="themeButton" type="button" onclick="changeTheme()"><strong style="font-size: 14px;">Change Theme</strong></button>
 	<h2>TECH SUPPORT</h2>
-	<form id="form">
-		<div class="accountWrapper">
-			<div class="accountArea">
+	<div class="accountWrapper">
+		<form id="createAccountForm">
+			<div id="createAccountBox" class="accountArea">
 				<h3>Create an Account</h3>
 				<section class="left">
 					<label>Enter a Username:</label> <input type="text" name="usernameReg"> <br>
@@ -23,7 +23,9 @@
 					<input class="submit accountSubmit" type="submit" value="Create Account"> <br>
 				</section>
 			</div>
-			<div class="accountArea">
+		</form>
+		<form id="signinAccountForm">
+			<div id="signinAccountBox" class="accountArea">
 				<h3>Sign in</h3>
 				<section class="left">
 					<label>Username:</label> <input type="text" name="username"> <br>
@@ -32,9 +34,11 @@
 					<input class="submit accountSubmit" type="submit" value="Sign in"> <br>
 				</section>
 			</div>
-		</div>
-		<br>
-		<div id="personalForm" class="formArea">
+		</form>
+	</div>
+	<br>
+	<form id="infoForm">
+		<div id="personalInfo" class="formArea">
 			<h3>Personal Information</h3>
 				<section class="left">
 				<label>First Name:</label> <input type="text" name="fname"> <br>
@@ -57,7 +61,7 @@
 			</section>
 		</div>
 		<br>
-		<div id="deviceForm" class="formArea">
+		<div id="deviceInfo" class="formArea">
 			<h3>Device Information</h3>
 				<section class="left">
 					<label>Device Type:</label>
@@ -80,6 +84,6 @@
 		</div>
 	</form>
 			<br>
-			<input class="submit" type="submit" value="Submit">
+			<input class="submit" type="submit" onclick="submitInfoForm()" value="Submit">
 </body>
 </html>
