@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <meta http-equiv="refresh" content="1"> -->
+<!-- <meta http-equiv="refresh" content="1"> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lab 1</title>
 	<link rel="stylesheet" href="lab1style.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h1>Human Interaction Lab</h1>
+	<div class="headerBox">
+		<h1 id="header">Human Interaction Lab</h1>
 	</div>
-		<button class="themeButton" type="button" onclick="changeTheme()"><strong style="font-size: 14px;">Change Theme</strong></button>
-	<h2>TECH SUPPORT</h2>
+	<div class="sidebar">
+		<ul>
+			<li><button class="sidebarButton" type="button" onclick="changeTheme()"><strong>Change Theme</strong></button></li>
+			<li><button class="sidebarButton" type="button" onclick="menuDrop()"><strong>Change Language</strong></button></li>
+			<li id="langDrop" class="sidebarButtonLangDrop">
+				<button class="sidebarButton sidebarButtonSub" type="button" onclick="changeLang()"><strong>Spanish</strong></button>
+			</li>
+		</ul>
+	</div>
+	<h2 id="techSupport">TECH SUPPORT</h2>
 	<div class="accountWrapper">
 		<form id="createAccountForm">
 			<div id="createAccountBox" class="accountArea">
-				<h3>Create an Account</h3>
+				<h3 id="createAnAccount">Create an Account</h3>
 				<section class="left">
 					<label>Enter a Username:</label> <input type="text" name="usernameReg"> <br>
 					<label>Enter a Password:</label> <input type="password" name="passwordReg"> <br>
@@ -26,7 +36,7 @@
 		</form>
 		<form id="signinAccountForm">
 			<div id="signinAccountBox" class="accountArea">
-				<h3>Sign in</h3>
+				<h3 id="signIn">Sign in</h3>
 				<section class="left">
 					<label>Username:</label> <input type="text" name="username"> <br>
 					<label>Password:</label> <input type="password" name="password"> <br>
@@ -39,8 +49,8 @@
 	<br>
 	<form id="infoForm">
 		<div id="personalInfo" class="formArea">
-			<h3>Personal Information</h3>
-				<section class="left">
+			<h3 id="personalInformation">Personal Information</h3>
+			<section class="left">
 				<label>First Name:</label> <input type="text" name="fname"> <br>
 				<label>Email:</label> <input type="email" name="email"> <br>
 				<label>City:</label> <input type="text" name="city"> <br>
@@ -50,40 +60,45 @@
 					<option value="Female">Female</option>
 					<option value="Other">Other</option>
 				</select> <br>
+				<label>Personal/Business?</label>
+					<input class="radioButton" type="radio" value="Personal">Personal
+					<input class="radioButton" type="radio" value="Personal">Business <br>
 			</section>
 			<section class="right">
 				<label>Last Name:</label> <input type="text" name="lname"> <br>
 				<label>Phone Number:</label> <input type="tel" name="phone"> <br>
 				<label>State:</label> <input type="text" name="state"> <br>
-				<label>Personal/Business?</label>
-					<input class="radioButton" type="radio" value="Personal">Personal
-					<input class="radioButton" type="radio" value="Personal">Business <br>
+				<label>Birth Date:</label> <input type="date"name="bday"> <br>
 			</section>
 		</div>
 		<br>
 		<div id="deviceInfo" class="formArea">
-			<h3>Device Information</h3>
-				<section class="left">
-					<label>Device Type:</label>
-					<select>
-						<option value="Desktop">Desktop</option>
-						<option value="Laptop">Laptop</option>
-						<option value="Smartphone">Smartphone</option>
-						<option value="Other">Other</option>
-					</select> <br>
-					<label>Device Model:</label> <input type="input" name="model"> <br>
-					<label>How many owned devices?</label> <input type="number" name="devices" style="width: 40px;"> <br>
-				</section>
-				<section class="right">
-					<label>Device Brand:</label> <input type="text" name="brand"> <br>
-					<label>Operating System:</label> <input type="text" name="os"> <br>
-				</section>
-				<section class="center">
-					<label>Describe issue:</label> <textarea rows="2" cols="70"></textarea>
-				</section>
+			<h3 id="deviceInformation">Device Information</h3>
+			<section class="left">
+				<label>Device Type:</label>
+				<select>
+					<option value="Desktop">Desktop</option>
+					<option value="Laptop">Laptop</option>
+					<option value="Smartphone">Smartphone</option>
+					<option value="Other">Other</option>
+				</select> <br>
+				<label>Device Model:</label> <input type="input" name="model"> <br>
+				<label>How many owned devices?</label> <input type="number" name="devices" style="width: 40px;"> <br>
+			</section>
+			<section class="right">
+				<label>Device Brand:</label> <input type="text" name="brand"> <br>
+				<label>Operating System:</label> <input type="text" name="os"> <br>
+			</section>
+			<section class="center">
+				<label>Describe issue:</label> <textarea rows="2" cols="70"></textarea>
+			</section>
+		</div>
+		<br>
+		<div id="servicesInfo" class="formArea">
+			<h3 id="services">Services</h3>
 		</div>
 	</form>
-			<br>
-			<input class="submit" type="submit" onclick="submitInfoForm()" value="Submit">
+	<br>
+	<input class="submit" type="submit" onclick="submitInfoForm()" value="Submit">
 </body>
 </html>
