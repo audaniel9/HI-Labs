@@ -5,7 +5,7 @@ body {
 	background-color: #6da5ff;
 	font-family: 'Lato', sans-serif;
 	color: #444;
-	margin: 100px 0px;
+	margin: 100px 0px 0px;
 }
 
 h2 {
@@ -175,4 +175,10 @@ input, select {
 .submit:hover {
 	opacity: 1;
 	transition: 0.2s;
+}
+
+.footerBox {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
 }
