@@ -44,3 +44,7 @@ function changeLang() {
   document.getElementById("deviceInformation").innerHTML = "Información del Dispositivo";
   document.getElementById("services").innerHTML = "Servicios";
 }
+
+function updateSliderValue(val) {
+          document.getElementById('sliderValue').value=val;
+        }
