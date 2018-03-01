@@ -22,11 +22,11 @@
 		</ul>
 	</div>
 	<h2 id="techSupport">TECH SUPPORT</h2>
-	<div class="accountWrapper">
+	<div class="sectionWrapper sectionWrapperAccount">
 		<form id="createAccountForm">
-			<div id="createAccountBox" class="accountArea">
+			<div id="createAccountBox" class="formArea formAreaAccount">
 				<h3 id="createAnAccount">Create an Account</h3>
-				<section class="left">
+				<section class="sectionBox sectionBoxAccount">
 					<label>Enter a Username:</label> <input type="text" name="usernameReg"> <br>
 					<label>Enter a Password:</label> <input type="password" name="passwordReg"> <br>
 					<label>Re-enter Password:</label> <input type="password" name="passwordRegReenter"> <br>
@@ -35,9 +35,9 @@
 			</div>
 		</form>
 		<form id="signinAccountForm">
-			<div id="signinAccountBox" class="accountArea">
+			<div id="signinAccountBox" class="formArea formAreaAccount">
 				<h3 id="signIn">Sign in</h3>
-				<section class="left">
+				<section class="sectionBox sectionBoxAccount">
 					<label>Username:</label> <input type="text" name="username"> <br>
 					<label>Password:</label> <input type="password" name="password"> <br>
 					<input type="checkbox" name="remember" style="width:auto;height:auto;"> <label>Remember me on this computer</label><br>
@@ -50,59 +50,71 @@
 	<form id="infoForm">
 		<div id="personalInfo" class="formArea">
 			<h3 id="personalInformation">Personal Information</h3>
-			<section class="left">
-				<label>First Name:</label> <input type="text" name="fname"> <br>
-				<label>Email:</label> <input type="email" name="email"> <br>
-				<label>City:</label> <input type="text" name="city"> <br>
-				<label>Gender:</label>
-				<select>
-					<option value="Male">Male</option>
-					<option value="Female">Female</option>
-					<option value="Other">Other</option>
-				</select> <br>
-				<label>Personal/Business?</label>
-					<input class="radioButton" type="radio" value="Personal">Personal
-					<input class="radioButton" type="radio" value="Personal">Business <br>
-			</section>
-			<section class="right">
-				<label>Last Name:</label> <input type="text" name="lname"> <br>
-				<label>Phone Number:</label> <input type="tel" name="phone"> <br>
-				<label>State:</label> <input type="text" name="state"> <br>
-				<label>Birth Date:</label> <input type="date"name="bday"> <br>
-			</section>
+			<div class="sectionWrapper">
+				<section id="left" class="sectionBox">
+					<label>First Name:</label> <input type="text" name="fname"> <br>
+					<label>Email:</label> <input type="email" name="email"> <br>
+					<label>City:</label> <input type="text" name="city"> <br>
+					<label>Gender:</label>
+					<select>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+						<option value="Other">Other</option>
+					</select> <br>
+					<label>Personal/Business?</label>
+						<input class="radioButton" type="radio" value="Personal">Personal
+						<input class="radioButton" type="radio" value="Personal">Business <br>
+				</section>
+				<section id="right" class="sectionBox">
+					<label>Last Name:</label> <input type="text" name="lname"> <br>
+					<label>Phone Number:</label> <input type="tel" name="phone"> <br>
+					<label>State:</label> <input type="text" name="state"> <br>
+					<label>Birth Date:</label> <input type="date"name="bday"> <br>
+				</section>
+			</div>
 		</div>
 		<br>
 		<div id="deviceInfo" class="formArea">
 			<h3 id="deviceInformation">Device Information</h3>
-			<section class="left">
-				<label>Device Type:</label>
-				<select>
-					<option value="Desktop">Desktop</option>
-					<option value="Laptop">Laptop</option>
-					<option value="Smartphone">Smartphone</option>
-					<option value="Other">Other</option>
-				</select> <br>
-				<label>Device Model:</label> <input type="input" name="model"> <br>
-				<label>How many owned devices?</label> <input type="number" name="devices" style="width: 40px;"> <br>
-			</section>
-			<section class="right">
-				<label>Device Brand:</label> <input type="text" name="brand"> <br>
-				<label>Operating System:</label> <input type="text" name="os"> <br>
-			</section>
-			<section class="center">
-				<label>Describe issue:</label> <textarea rows="2" cols="70" style="margin-top: 15px;"></textarea>
-			</section>
+			<div class="sectionWrapper">
+				<section id="left" class="sectionBox">
+					<label>Device Type:</label>
+					<select>
+						<option value="Desktop">Desktop</option>
+						<option value="Laptop">Laptop</option>
+						<option value="Smartphone">Smartphone</option>
+						<option value="Other">Other</option>
+					</select> <br>
+					<label>Device Model:</label> <input type="input" name="model"> <br>
+					<label>How many owned devices?</label> <input type="number" name="devices" style="width: 40px;"> <br>
+				</section>
+				<section id="right" class="sectionBox">
+					<label>Device Brand:</label> <input type="text" name="brand"> <br>
+					<label>Operating System:</label> <input type="text" name="os"> <br>
+				</section>
+			</div>
+			<div class="sectionWrapper">
+				<section class="sectionBox sectionBoxCenter">
+					<label>Describe issue:</label> <textarea rows="2" cols="86" style="margin-top: 15px;"></textarea>
+				</section>
+			</div>
 		</div>
 		<br>
 		<div id="servicesInfo" class="formArea">
 			<h3 id="services">Services</h3>
+			<div class="sectionWrapper">
+			</div>
 		</div>
 		<br>
 		<div id ="surveyInfo" class="formArea">
 			<h3 id="survey">Survey</h3>
-			<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
-			<input class="slider" type="range" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
-			<input id="sliderValue" type="number" value="0" readonly="readonly">
+			<div class="sectionWrapper">
+				<section class="sectionBox sectionBoxCenter">
+					<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
+					<input class="slider" type="range" name="satisfaction" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
+					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;">
+				</section>
+			</div>
 		</div>
 	</form>
 	<br>

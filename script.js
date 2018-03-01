@@ -8,19 +8,21 @@ function changeTheme() {
   var personal = document.getElementById("personalInfo");
   var device = document.getElementById("deviceInfo");
   var service = document.getElementById("servicesInfo");
+  var surveyQ = document.getElementById("surveyInfo");
 
   if(create.className !== "themeStyleAccount" && signin.className !== "themeStyleAccount" &&
       personal.className !== "themeStyleInfo" && device.className !== "themeStyleInfo" &&
-      service.className !== "themeStyleInfo") {
-    create.className = "themeStyleAccount";
-    signin.className = "themeStyleAccount";
-    personal.className = "themeStyleInfo";
-    device.className = "themeStyleInfo";
-    service.className = "themeStyleInfo";
+      service.className !== "themeStyleInfo" && surveyQ.className !== "themeStyleInfo") {
+    create.className = "formArea formAreaAccount themeStyleAccount";
+    signin.className = "formArea formAreaAccount themeStyleAccount";
+    personal.className = "formArea themeStyleInfo";
+    device.className = "formArea themeStyleInfo";
+    service.className = "formArea themeStyleInfo";
+    surveyQ.className = "formArea themeStyleInfo";
   }
   else {
-    create.className = "accountArea";
-    signin.className = "accountArea";
+    create.className = "formArea formAreaAccount";
+    signin.className = "formArea formAreaAccount";
     personal.className = "formArea";
     device.className = "formArea";
     service.className = "formArea";
@@ -43,8 +45,9 @@ function changeLang() {
   document.getElementById("personalInformation").innerHTML = "Informacion Personal";
   document.getElementById("deviceInformation").innerHTML = "Información del Dispositivo";
   document.getElementById("services").innerHTML = "Servicios";
+  document.getElementById("survey").innerHTML = "Encuesta";
 }
 
 function updateSliderValue(val) {
-          document.getElementById('sliderValue').value=val;
-        }
+  document.getElementById('sliderValue').value=val;
+}
