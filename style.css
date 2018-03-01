@@ -59,7 +59,7 @@ input, select {
 }
 
 .sectionBoxAccount {
-	margin-right: 50px;
+	margin-right: 55px;
 }
 
 .sectionBoxCenter {
@@ -134,12 +134,24 @@ input, select {
 }
 
 .formAreaAccount {
-	width: 430px !important;
+	width: 438px !important;
 }
 
 .radioButton {
 	width: auto;
 	height: auto;
+}
+
+.locationDisplay {
+	background-color: #EEEEEE;
+	font-weight: bold;
+	text-align: left;
+	width: 80%;
+	height: 100px;
+	margin: auto;
+	padding: 0px 15px;
+	border-style: groove;
+	border-width: thin;
 }
 
 .slider {

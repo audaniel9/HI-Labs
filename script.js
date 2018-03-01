@@ -10,9 +10,13 @@ function changeTheme() {
   var service = document.getElementById("servicesInfo");
   var surveyQ = document.getElementById("surveyInfo");
 
-  if(create.className !== "themeStyleAccount" && signin.className !== "themeStyleAccount" &&
-      personal.className !== "themeStyleInfo" && device.className !== "themeStyleInfo" &&
-      service.className !== "themeStyleInfo" && surveyQ.className !== "themeStyleInfo") {
+  if(create.className !== "formArea formAreaAccount themeStyleAccount" &&
+    signin.className !== "formArea formAreaAccount themeStyleAccount" &&
+    personal.className !== "formArea themeStyleInfo" &&
+    device.className !== "formArea themeStyleInfo" &&
+    service.className !== "formArea themeStyleInfo" &&
+    surveyQ.className !== "formArea themeStyleInfo") {
+
     create.className = "formArea formAreaAccount themeStyleAccount";
     signin.className = "formArea formAreaAccount themeStyleAccount";
     personal.className = "formArea themeStyleInfo";
@@ -26,6 +30,7 @@ function changeTheme() {
     personal.className = "formArea";
     device.className = "formArea";
     service.className = "formArea";
+    surveyQ.className = "formArea";
   }
 }
 
@@ -46,6 +51,29 @@ function changeLang() {
   document.getElementById("deviceInformation").innerHTML = "Información del Dispositivo";
   document.getElementById("services").innerHTML = "Servicios";
   document.getElementById("survey").innerHTML = "Encuesta";
+}
+
+function getLocation() {
+  var loc = document.getElementById("location");
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+		else {
+        loc.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+		document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+
+function googleMap() {
+  var mapOptions = {
+      center: new google.maps.LatLng(40.759, -74.039),
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("servicesRight"), mapOptions);
 }
 
 function updateSliderValue(val) {
