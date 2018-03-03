@@ -77,5 +77,13 @@ function googleMap() {
 }
 
 function updateSliderValue(val) {
-  document.getElementById('sliderValue').value=val;
+  document.getElementById("sliderValue").value=val;
+}
+
+function uppercase(text) {
+  text.value = text.value.toUpperCase();
+}
+
+function wordCount(textBox) {
+  document.getElementById("counter").innerHTML = textBox.value.length;
 }

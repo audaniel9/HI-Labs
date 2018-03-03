@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <meta http-equiv="refresh" content="1"> -->
+<meta http-equiv="refresh" content="1">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HI Website</title>
@@ -55,7 +55,7 @@
 				<section id="personalLeft" class="sectionBox">
 					<label>First Name:</label> <input type="text" name="fname"> <br>
 					<label>Email:</label> <input type="email" name="email"> <br>
-					<label>City:</label> <input type="text" name="city"> <br>
+					<label>City:</label> <input type="text" name="city" onkeyup="uppercase(this)"> <br>
 					<label>Gender:</label>
 					<select>
 						<option value="Male">Male</option>
@@ -69,7 +69,7 @@
 				<section id="personalRight" class="sectionBox">
 					<label>Last Name:</label> <input type="text" name="lname"> <br>
 					<label>Phone Number:</label> <input type="tel" name="phone"> <br>
-					<label>State:</label> <input type="text" name="state"> <br>
+					<label>State:</label> <input type="text" name="state" onkeyup="uppercase(this)"> <br>
 					<label>Birth Date:</label> <input type="date"name="bday"> <br>
 				</section>
 			</div>
@@ -96,7 +96,8 @@
 			</div>
 			<div class="sectionWrapper">
 				<section class="sectionBox sectionBoxCenter">
-					<label>Describe issue:</label> <textarea rows="2" cols="86" style="margin-top: 15px;"></textarea>
+					<label>Describe issue:</label> <textarea id="descBox" rows="2" cols="86" onkeydown="wordCount(this)" style="margin-top:15px;"></textarea> <br>
+					<div class="wordCounter">Word count: <span id="counter">0</span></div>
 				</section>
 			</div>
 		</div>
@@ -109,7 +110,19 @@
 					<div id="location" class="locationDisplay"></div>
 					<button class="submit" type="button" onclick="getLocation()">Locate Me</button>
 				</div>
-				<div id="servicesRight" class="sectionBox" style="height:300px;">
+				<div id="servicesRight" class="sectionBox" style="height:300px;border:1px groove">
+				</div>
+			</div>
+			<br>
+			<div class="sectionWrapper">
+				<div id="servicesCenter" class="sectionBox sectionBoxCenter">
+					<table>
+						<th colspan="3">Locations</th>
+						<tr><td>City College</td><td>Hunter College</td><td>Baruch College</td></tr>
+						<tr><td>Brooklyn College</td><td>Queens College</td><td>NYCT</td></tr>
+						<tr><td>College of Staten Island</td><td>John Jay College</td><td>York College</td></tr>
+						<tr><td>Lehman College</td><td>Medgar Evers College</td><td>Macaulay Honors College</tr>
+					</table>
 				</div>
 			</div>
 		</div>
