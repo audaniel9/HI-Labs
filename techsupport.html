@@ -108,18 +108,18 @@
 		<div id="servicesInfo" class="formArea">
 			<h3 id="services">Services</h3>
 			<div class="sectionWrapper">
-				<div id="servicesLeft" class="sectionBox" style="text-align:center;">
+				<section id="servicesLeft" class="sectionBox" style="text-align:center;">
 					<label>Tell us your location:</label> <br>
 					<div id="location" class="locationDisplay"></div>
 					<button class="submit" type="button" onclick="getLocation()">Locate Me</button> <br>
 					<em>Your location information will <br> not be stored permanently.</em>
-				</div>
+				</section>
 				<div id="servicesRight" class="sectionBox" style="height:300px;border:1px groove">
 				</div>
 			</div>
 			<br>
 			<div class="sectionWrapper">
-				<div id="servicesCenter" class="sectionBox sectionBoxCenter">
+				<section id="servicesCenter" class="sectionBox sectionBoxCenter">
 					<table>
 						<th colspan="3">Locations</th>
 						<tr><td>City College</td><td>Hunter College</td><td>Baruch College</td></tr>
@@ -127,7 +127,7 @@
 						<tr><td>College of Staten Island</td><td>John Jay College</td><td>York College</td></tr>
 						<tr><td>Lehman College</td><td>Medgar Evers College</td><td>Macaulay Honors College</tr>
 					</table>
-				</div>
+				</section>
 			</div>
 		</div>
 		<br>
@@ -149,11 +149,17 @@
 						<option value="morning">Morning</option>
 						<option value="afternoon">Afternoon</option>
 						<option value="evening">Evening</option>
-					</select>
-					<br>
+					</select> <br>
 					<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
 					<input class="slider" type="range" name="satisfaction" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
-					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;"> <br><br>
+					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;"> <br>
+					<label>Describe your emotions while browsing this site by dragging the emojis to the box.</label> <br>
+					<img id="emojiSmile" src="images/smile.png" draggable="true" ondragstart="drag(event)">
+					<img id="emojiOface" src="images/oface.png" draggable="true" ondragstart="drag(event)">
+					<img id="emojiZzz" src="images/zzz.png" draggable="true" ondragstart="drag(event)">
+					<img id="emojiPuke" src="images/puke.png" draggable="true" ondragstart="drag(event)">
+					<img id="emojiPout" src="images/pout.png" draggable="true" ondragstart="drag(event)">
+					<div class="dragDropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <br>
 					<iframe width="450" height="280" src="https://www.youtube.com/embed/FzjtPtOH-Hg" frameborder="0" allowfullscreen></iframe>
 				</section>
 			</div>
