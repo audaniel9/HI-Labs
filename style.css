@@ -53,8 +53,8 @@ strong {
 
 input, select {
 	box-sizing: border-box;
-	width:173px;
-	height:23px;
+	width: 173px;
+	height: 23px;
 }
 
 .sectionWrapper {
@@ -178,6 +178,13 @@ input, select {
 	border-width: thin;
 }
 
+.selectMultiple {
+	width: 130px;
+	height: 100px;
+	border: 1px groove;
+	font-size: 16px;
+}
+
 .slider {
 	width: 300px;
 	opacity: 0.7;
@@ -186,14 +193,18 @@ input, select {
 }
 
 .submit {
-	width:100px;
-	height:30px;
+	width: 150px;
+	height: 30px;
 	opacity: 0.8;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-.accountSubmit {
-	width: 150px;
+.submitMaster {
+	height: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: #87d37c;
+	border-radius: 15px;
 }
 
 .submit:hover {

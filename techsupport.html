@@ -31,7 +31,7 @@
 					<label>Type a Username:</label> <input type="text" name="usernameReg"> <br>
 					<label>Type a Password:</label> <input type="password" name="passwordReg"> <br>
 					<label>Re-type Password:</label> <input type="password" name="passwordRegReenter"> <br>
-					<input class="submit accountSubmit" type="submit" value="Create Account"> <br>
+					<input class="submit" type="submit" value="Create Account"> <br>
 				</section>
 			</div>
 		</form>
@@ -42,7 +42,7 @@
 					<label>Enter Username:</label> <input type="text" name="username"> <br>
 					<label>Enter Password:</label> <input type="password" name="password"> <br>
 					<input type="checkbox" name="remember" style="width:auto;height:auto;"> <label>Remember me on this computer</label><br>
-					<input class="submit accountSubmit" type="submit" value="Sign in"> <br>
+					<input class="submit" type="submit" value="Sign in"> <br>
 				</section>
 			</div>
 		</form>
@@ -131,16 +131,32 @@
 			<h3 id="survey">Survey</h3>
 			<div class="sectionWrapper">
 				<section class="sectionBox sectionBoxCenter">
+					<label>Which day(s) of the week are you usually free?</label> <br>
+					<select multiple class="selectMultiple">
+						<option value="monday">Monday</option>
+						<option value="tuseday">Tuesday</option>
+						<option value="wednesday">Wednesday</option>
+						<option value="thursday">Thursday</option>
+						<option value="friday">Friday</option>
+						<option value="saturday">Saturday</option>
+						<option value="sunday">Sunday</option>
+					</select>
+					<select multiple class="selectMultiple">
+						<option value="morning">Morning</option>
+						<option value="afternoon">Afternoon</option>
+						<option value="evening">Evening</option>
+					</select>
+					<br>
 					<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
 					<input class="slider" type="range" name="satisfaction" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
 					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;"> <br><br>
-					<iframe width="450" height="280" src="https://www.youtube.com/embed/ZcoqR9Bwx1Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe width="450" height="280" src="https://www.youtube.com/embed/ZcoqR9Bwx1Y" frameborder="0" allowfullscreen></iframe>
 				</section>
 			</div>
 		</div>
 	</form>
 	<br>
-	<input class="submit" type="submit" onclick="submitInfoForm()" value="Submit"> <br>
+	<input class="submit submitMaster" type="submit" onclick="submitInfoForm()" value="Submit"> <br>
 	<br>
 	<br>
 	<div class="footerBox">
