@@ -2,46 +2,30 @@ function submitInfoForm() {
     document.getElementById("infoForm").submit();
 }
 
-function changeTheme() {
-  var create = document.getElementById("createAccountBox");
-  var signin = document.getElementById("signinAccountBox");
-  var personal = document.getElementById("personalInfo");
-  var device = document.getElementById("deviceInfo");
-  var service = document.getElementById("servicesInfo");
-  var surveyQ = document.getElementById("surveyInfo");
+function changeTheme(choice) {
+  var divs = document.getElementsByClassName("formArea");
+  var dark = document.getElementById("darkTheme");
+  var beige = document.getElementById("beigeTheme");
 
-  if(create.className !== "formArea formAreaAccount themeStyleAccount" &&
-    signin.className !== "formArea formAreaAccount themeStyleAccount" &&
-    personal.className !== "formArea themeStyleInfo" &&
-    device.className !== "formArea themeStyleInfo" &&
-    service.className !== "formArea themeStyleInfo" &&
-    surveyQ.className !== "formArea themeStyleInfo") {
-
-    create.className = "formArea formAreaAccount themeStyleAccount";
-    signin.className = "formArea formAreaAccount themeStyleAccount";
-    personal.className = "formArea themeStyleInfo";
-    device.className = "formArea themeStyleInfo";
-    service.className = "formArea themeStyleInfo";
-    surveyQ.className = "formArea themeStyleInfo";
-  }
-  else {
-    create.className = "formArea formAreaAccount";
-    signin.className = "formArea formAreaAccount";
-    personal.className = "formArea";
-    device.className = "formArea";
-    service.className = "formArea";
-    surveyQ.className = "formArea";
+  for(i=0; i<divs.length; i++) {
+    switch(choice) {
+      case dark:
+        divs[i].classList.add("formAreaThemeDark");
+        divs[i].classList.remove("formAreaThemeBeige");
+        break;
+      case beige:
+        divs[i].classList.add("formAreaThemeBeige");
+        divs[i].classList.remove("formAreaThemeDark");
+        break;
+      default:
+        divs[i].classList.remove("formAreaThemeDark");
+        divs[i].classList.remove("formAreaThemeBeige");
+    }
   }
 }
 
-function menuDrop() {
-  var visible = document.getElementById("langDrop");
-  if(visible.style.display == "none") {
-    visible.style.display = "flex";
-  }
-  else {
-    visible.style.display = "none";
-  }
+function menuDrop(btn) {
+  btn.classList.toggle("sidebarItemHide");
 }
 
 function changeLang() {

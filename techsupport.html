@@ -15,11 +15,14 @@
 	</div>
 	<div class="sidebar">
 		<ul>
-			<li><button class="sidebarButton" type="button" onclick="changeTheme()"><strong>Change Theme</strong></button></li>
-			<li><button class="sidebarButton" type="button" onclick="menuDrop()"><strong>Change Language</strong></button></li>
-			<li id="langDrop" class="sidebarButtonLangDrop">
-				<button class="sidebarButton sidebarButtonSub" type="button" onclick="changeLang()"><strong>Spanish</strong></button>
-			</li>
+			<li><button class="sidebarBtn" type="button" onclick="menuDrop(themeMenu)"><strong>Change Theme</strong></button></li>
+				<div id="themeMenu" class="themeMenuBox sidebarItemHide">
+					<input id="lightTheme" class="themeTickbox" type="radio" name="theme" onclick="changeTheme(lightTheme)" checked><strong>Light</strong></input> <br>
+					<input id="darkTheme" class="themeTickbox" type="radio" name="theme" onclick="changeTheme(darkTheme)"><strong>Dark</strong></input> <br>
+					<input id="beigeTheme" class="themeTickbox" type="radio" name="theme" onclick="changeTheme(beigeTheme)"><strong>Beige</strong></input>
+				</div>
+			<li><button class="sidebarBtn" type="button" onclick="menuDrop(langES)"><strong>Change Language</strong></button></li>
+				<li id="langES" class="sidebarItemHide"> <button class="sidebarBtn sidebarBtnSmall" type="button" onclick="changeLang()"><strong>Spanish</strong></button></li>
 		</ul>
 	</div>
 	<h2 id="techSupport">TECH SUPPORT</h2>
@@ -41,7 +44,7 @@
 				<section class="sectionBox sectionBoxAccount">
 					<label>Enter Username:</label> <input type="text" name="username"> <br>
 					<label>Enter Password:</label> <input type="password" name="password"> <br>
-					<input type="checkbox" name="remember" style="width:auto;height:auto;"> <label>Remember me on this computer</label><br>
+					<input class="rememberTickbox" type="checkbox" name="remember"> <label>Remember me on this computer</label><br>
 					<input class="submit" type="submit" value="Sign in"> <br>
 				</section>
 			</div>
@@ -70,7 +73,7 @@
 					<label>Last Name:</label> <input type="text" name="lname"> <br>
 					<label>Phone Number:</label> <input type="tel" name="phone"> <br>
 					<label>State:</label> <input type="text" name="state" onkeyup="uppercase(this)"> <br>
-					<label>Birth Date:</label> <input type="date"name="bday"> <br>
+					<label>Birth Date:</label> <input type="date" name="bday"> <br>
 				</section>
 			</div>
 		</div>
@@ -108,7 +111,8 @@
 				<div id="servicesLeft" class="sectionBox" style="text-align:center;">
 					<label>Tell us your location:</label> <br>
 					<div id="location" class="locationDisplay"></div>
-					<button class="submit" type="button" onclick="getLocation()">Locate Me</button>
+					<button class="submit" type="button" onclick="getLocation()">Locate Me</button> <br>
+					<em>Your location information will <br> not be stored permanently.</em>
 				</div>
 				<div id="servicesRight" class="sectionBox" style="height:300px;border:1px groove">
 				</div>
@@ -150,7 +154,7 @@
 					<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
 					<input class="slider" type="range" name="satisfaction" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
 					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;"> <br><br>
-					<iframe width="450" height="280" src="https://www.youtube.com/embed/ZcoqR9Bwx1Y" frameborder="0" allowfullscreen></iframe>
+					<iframe width="450" height="280" src="https://www.youtube.com/embed/FzjtPtOH-Hg" frameborder="0" allowfullscreen></iframe>
 				</section>
 			</div>
 		</div>
