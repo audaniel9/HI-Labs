@@ -81,7 +81,6 @@ input, select {
 .sectionBoxCenter {
 	text-align: center;
 	width: 740px;
-	line-height: normal;
 }
 
 .headerBox {
@@ -160,7 +159,7 @@ input, select {
 }
 
 .wordCounter {
-	font-size: 14px;
+	font-size: 13px;
 	font-style: italic;
 	width: 99%;
 	text-align: right;

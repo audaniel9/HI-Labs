@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="1">
+<!-- <meta http-equiv="refresh" content="1"> -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HI Website</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
@@ -95,7 +95,7 @@
 				</section>
 			</div>
 			<div class="sectionWrapper">
-				<section class="sectionBox sectionBoxCenter">
+				<section class="sectionBox sectionBoxCenter" style="line-height:normal;">
 					<label>Describe issue:</label> <textarea id="descBox" rows="2" cols="86" onkeydown="wordCount(this)" style="margin-top:15px;"></textarea> <br>
 					<div class="wordCounter">Word count: <span id="counter">0</span></div>
 				</section>
@@ -130,10 +130,11 @@
 		<div id ="surveyInfo" class="formArea">
 			<h3 id="survey">Survey</h3>
 			<div class="sectionWrapper">
-				<section class="sectionBox sectionBox">
+				<section class="sectionBox sectionBoxCenter">
 					<label>On a scale of 1-10, how satisfied are you with the support?</label> <br>
 					<input class="slider" type="range" name="satisfaction" min="1" max="10" value="10" onchange="updateSliderValue(this.value);">
-					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;">
+					<input id="sliderValue" type="number" value="0" readonly="readonly" style="width: 40px;"> <br><br>
+					<iframe width="450" height="280" src="https://www.youtube.com/embed/ZcoqR9Bwx1Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</section>
 			</div>
 		</div>
