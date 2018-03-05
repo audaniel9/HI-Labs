@@ -56,7 +56,7 @@
 			<h3 id="personalInformation">Personal Information</h3>
 			<div class="sectionWrapper">
 				<section id="personalLeft" class="sectionBox">
-					<label>First Name:</label> <input type="text" name="fname"> <br>
+					<label id="fname">First Name:</label> <input type="text"> <br>
 					<label>Email:</label> <input type="email" name="email"> <br>
 					<label>City:</label> <input type="text" name="city" onkeyup="uppercase(this)"> <br>
 					<label>Gender:</label>
@@ -136,6 +136,7 @@
 			<div class="sectionWrapper">
 				<section class="sectionBox sectionBoxCenter">
 					<label>Which day(s) of the week are you usually free?</label> <br>
+					<em>Ctrl+click to select multiple</em> <br>
 					<select multiple class="selectMultiple">
 						<option value="monday">Monday</option>
 						<option value="tuseday">Tuesday</option>

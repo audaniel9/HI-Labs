@@ -29,6 +29,8 @@ function menuDrop(btn) {
 }
 
 function changeLang() {
+  document.getElementById("header").innerHTML = "Forma de información";
+  document.getElementById("techSupport").innerHTML = "APOYO TÉCNICO";
   document.getElementById("createAnAccount").innerHTML = "Crea una Cuenta";
   document.getElementById("signIn").innerHTML = "Registrarse";
   document.getElementById("personalInformation").innerHTML = "Informacion Personal";
@@ -83,4 +85,16 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   event.target.appendChild(document.getElementById(event.dataTransfer.getData("text")));
+}
+
+function storage() {
+  var field = document.getElementById("fname");
+
+  if(sessionStorage.getItem("autosave")) {
+    field.value = sessionStorage.getItem("autosave");
+  }
+
+  field.addListener("change",function() {
+    sessionStorage.setItem("autosave",field.value);
+  });
 }
